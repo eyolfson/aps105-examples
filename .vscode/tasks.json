@@ -34,7 +34,7 @@
             "options": {
                 "cwd": "${workspaceFolder}/01-why-c-programming"
             },
-			"dependsOn": [
+            "dependsOn": [
                 "Compile 01"
             ]
         },
