@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "Setup 01",
+            "type": "shell",
+            "command": "meson setup build",
+            "options": {
+                "cwd": "${workspaceFolder}/01-why-c-programming"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": []
+        },
+		{
+            "label": "Compile 01",
+            "type": "shell",
+            "command": "meson compile -C build",
+            "group": {
+                "kind": "build",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/01-why-c-programming"
+            },
+        },
+		{
+            "label": "Run 01",
+            "type": "shell",
+            "command": "build/hello-world",
+            "group": {
+                "kind": "test",
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/01-why-c-programming"
+            },
+			"dependsOn": [
+                "Compile 01"
+            ]
+        },
+	]
+}
