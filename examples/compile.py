@@ -12,7 +12,9 @@ def main():
 
     build_dir = cwd / 'build'
     if not build_dir.exists():
-        subprocess.run(['meson', 'setup', '--buildtype', 'plain', 'build'])
+        os.environ['CC'] = 'clang'
+        os.environ['CFLAGS'] = '-pipe'
+        subprocess.run(['meson', 'setup', '--buildtype', 'debug', 'build'])
 
     subprocess.run(['meson', 'compile', '-C', 'build'])
 
