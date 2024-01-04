@@ -1,7 +1,7 @@
 project(
-  '01-why-operating-systems',
+  '01-why-c-programming',
   'c',
-  default_options : ['c_std=c17', 'warning_level=3', 'c_args=-D_DEFAULT_SOURCE']
+  default_options : ['c_std=gnu2x', 'warning_level=everything']
 )
 
 executable('hello-world',

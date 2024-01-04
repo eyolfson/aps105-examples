@@ -1,3 +1,18 @@
-FROM archlinux:base-devel-20231112.0.191179
+FROM debian:12.4-slim
 
-RUN pacman -Syy && pacman -S --noconfirm git
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    git \
+    locales \
+    meson \
+    python3-venv \
+    wget \
+    zsh \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
+
+RUN sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" "" --unattended \
+    && sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="lukerandall"/g' /root/.zshrc
+
+CMD ["zsh"]
