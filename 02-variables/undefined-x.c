@@ -1,5 +1,9 @@
+#include <stdio.h>
+
 int main(void) {
-    x = 1;
-    int x;
-    return 0;
+    int x = 42;
+    int y = 43;
+    scanf("%d%d", &x, &y);
+    printf("Got %d %d\n", x, y);
+    return x;
 }

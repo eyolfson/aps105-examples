@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y \
     clang \
     git \
     locales \
+    man-db \
+    manpages-dev \
     meson \
     python3-venv \
     wget \
