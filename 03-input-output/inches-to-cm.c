@@ -6,6 +6,6 @@ int main(void) {
     printf("Enter length (inches): ");
     scanf("%lf", &inches);
     double cm = inches * InchesPerCM;
-    printf("Converted length (cm): %lf\n", cm);
+    printf("Converted length (cm): %.2lf\n", cm);
     return 0;
 }
