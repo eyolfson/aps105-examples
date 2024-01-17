@@ -1,5 +1,5 @@
 project(
-  '05-math',
+  '06-if-statements',
   'c',
   default_options : ['c_std=gnu2x', 'warning_level=3']
 )
