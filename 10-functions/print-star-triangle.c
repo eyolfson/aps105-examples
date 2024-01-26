@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-void printLine(int numStars) {
-    for (int count = 1; count <= numStars; ++count) {
+void printRow(int row) {
+    for (int count = 1; count <= row; ++count) {
         printf("*");
     }
     printf("\n");
@@ -10,7 +10,7 @@ void printLine(int numStars) {
 
 void printTriangle(int maxRow) {
     for (int row = 1; row <= maxRow; ++row) {
-        printLine(row);
+        printRow(row);
     }
 }
 
