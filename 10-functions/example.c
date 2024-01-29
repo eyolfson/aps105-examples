@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int addTwo(int);
+
 int main(void) {
     printf("Result: %d\n", addTwo(4));
     return EXIT_SUCCESS;
