@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int a = 1;
-static int b = 2;
-
-void swap(void) {
-    int temp = a;
-    a = b;
-    b = temp;
-    printf("swap a: %d, b: %d\n", a, b);
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int main(void) {
+    int a = 1;
+    int b = 2;
     printf("main (before swap) a: %d, b: %d\n", a, b);
-    swap();
+    swap(&a, &b);
     printf("main (after swap)  a: %d, b: %d\n", a, b);
     return EXIT_SUCCESS;
 }
