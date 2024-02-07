@@ -12,8 +12,6 @@ int sum(int array[], int arrayLength) {
 }
 
 int main(void) {
-    int x;
-    printf("%p\n", (&x + 1));
     int grades[] = {75, 83, 99, 64, 72};
     int gradesLength = ARRAY_LENGTH(grades);
     int average = sum(grades, gradesLength) / gradesLength;

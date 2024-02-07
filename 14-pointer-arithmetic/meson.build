@@ -6,5 +6,8 @@ project(
 
 executable('arithmetic', 'arithmetic.c')
 executable('array-argument', 'array-argument.c')
+executable('deref-null', 'deref-null.c')
 executable('example', 'example.c')
+executable('invalid-pointer', 'invalid-pointer.c')
+executable('max-pointer', 'max-pointer.c')
 executable('sum', 'sum.c')
