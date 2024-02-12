@@ -7,3 +7,4 @@ project(
 executable('barcodeDigit', 'barcodeDigit.c')
 executable('dotProduct', 'dotProduct.c')
 executable('example', 'example.c')
+executable('pattern', 'pattern.c')
