@@ -4,14 +4,6 @@ project(
   default_options : ['c_std=gnu2x', 'warning_level=3']
 )
 
-cc = meson.get_compiler('c')
-m_dep = cc.find_library('m', required : false)
-
 executable('barcodeDigit', 'barcodeDigit.c')
-executable('estimateE', 'estimateE.c')
 executable('example', 'example.c')
-executable('largestSum', 'largestSum.c')
-executable('numberOfBits', 'numberOfBits.c')
-executable('orderArrayByDigit2', 'orderArrayByDigit2.c')
 executable('pattern', 'pattern.c')
-executable('pythagoreanTriples', 'pythagoreanTriples.c', dependencies : m_dep)
