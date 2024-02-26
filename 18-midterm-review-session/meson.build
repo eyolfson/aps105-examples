@@ -1,5 +1,5 @@
 project(
-  '17-midterm-review-session',
+  '18-midterm-review-session',
   'c',
   default_options : ['c_std=gnu2x', 'warning_level=3']
 )
@@ -13,4 +13,3 @@ executable('largestSum', 'largestSum.c')
 executable('numberOfBits', 'numberOfBits.c')
 executable('orderArrayByDigit2', 'orderArrayByDigit2.c')
 executable('pythagoreanTriples', 'pythagoreanTriples.c', dependencies : m_dep)
-executable('sieve', 'sieve.c')
