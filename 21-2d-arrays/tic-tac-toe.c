@@ -41,7 +41,7 @@ int main(void) {
     const int SIZE = 3;
 
     char board[SIZE][SIZE];
-    printf("Input xs and os:\n");
+    printf("Input xs and os (or . for an empty space):\n");
     for (int i = 0; i < SIZE; ++i) {
         for (int j = 0; j < SIZE; ++j) {
             scanf(" %c", &board[i][j]);
