@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void randomizeArray(int *array, int arrayLength) {
+void randomizeArray(int array[], int arrayLength) {
     for (int i = 0; i < arrayLength; ++i) {
         array[i] = rand() % 100 + 1;
     }
 }
 
-void printArray(int *array, int arrayLength) {
+void printArray(int array[], int arrayLength) {
     printf("array:");
     for (int i = 0; i < arrayLength; ++i) {
         printf(" %d", array[i]);
