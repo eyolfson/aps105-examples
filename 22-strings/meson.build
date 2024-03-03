@@ -7,6 +7,8 @@ project(
 executable('array-length', 'array-length.c')
 executable('can-modify', 'can-modify.c')
 executable('cannot-modify', 'cannot-modify.c')
+executable('count-spaces', 'count-spaces.c')
 executable('example', 'example.c')
 executable('magic', 'magic.c')
+executable('string-length', 'string-length.c')
 executable('too-short', 'too-short.c')
