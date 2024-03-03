@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 void checkWinner(int size, char board[][size]) {
     for (int i = 0; i < size; ++i) {
         char rowChar = board[i][0];
