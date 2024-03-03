@@ -4,6 +4,7 @@ project(
   default_options : ['c_std=gnu2x', 'warning_level=3']
 )
 
+executable('array-length', 'array-length.c')
 executable('can-modify', 'can-modify.c')
 executable('cannot-modify', 'cannot-modify.c')
 executable('example', 'example.c')
