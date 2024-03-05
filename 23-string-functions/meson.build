@@ -5,7 +5,9 @@ project(
 )
 
 executable('example', 'example.c')
+executable('strcat', 'strcat.c')
 executable('strcpy', 'strcpy.c')
 executable('strlen', 'strlen.c')
+executable('strncat', 'strncat.c')
 executable('strncpy', 'strncpy.c')
 executable('strnlen', 'strnlen.c')
