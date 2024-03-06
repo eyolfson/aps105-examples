@@ -6,6 +6,7 @@ project(
 
 executable('atof', 'atof.c')
 executable('atoi', 'atoi.c')
+executable('compare', 'compare.c')
 executable('example', 'example.c')
 executable('strcat', 'strcat.c')
 executable('strchr', 'strchr.c')
