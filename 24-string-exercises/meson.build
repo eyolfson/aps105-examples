@@ -6,3 +6,5 @@ project(
 
 executable('dectohex', 'dectohex.c')
 executable('example', 'example.c')
+executable('long', 'long.c')
+executable('short', 'short.c')
