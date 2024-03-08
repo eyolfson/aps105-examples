@@ -16,6 +16,9 @@ int stringToInt(const char *s) {
 char *intToHexString(int value) {
     int numChars = 0;
     int remaining = value;
+    if (remaining == 0) {
+        numChars = 1;
+    }
     while (remaining > 0) {
         ++numChars;
         remaining /= 16;
@@ -26,6 +29,9 @@ char *intToHexString(int value) {
     int i = size - 1;
     s[i] = '\0';
     remaining = value;
+    if (remaining == 0) {
+        s[i - 1] = '0';
+    }
     while (remaining > 0) {
         --i;
         int remainder = remaining % 16;
