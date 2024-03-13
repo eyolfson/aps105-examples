@@ -3,13 +3,17 @@
 
 #define ARRAY_LENGTH(array) (sizeof((array))/sizeof((array)[0]))
 
-int sum(int *array, int arrayLength) {
+int sum_helper(int *array, int arrayLength, int currentSum) {
     if (arrayLength == 0) {
-        return 0;
+        return currentSum;
     }
     else {
-        return array[0] + sum(array + 1, arrayLength - 1);
+        return sum_helper(array + 1, arrayLength - 1, array[0] + currentSum);
     }
+}
+
+int sum(int *array, int arrayLength) {
+    return sum_helper(array, arrayLength, 0);
 }
 
 int main(void) {
