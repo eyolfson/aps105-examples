@@ -6,6 +6,10 @@ double distance(double x1, double y1, double x2, double y2) {
     return sqrt(pow(x2 - x1, 2.0) + pow(y2 - y1, 2.0));
 }
 
+void print(double x, double y) {
+    printf("point(%.1lf, %.1lf)\n", x, y);
+}
+
 int main(void) {
     double x1 = 1.0;
     double y1 = 2.0;
