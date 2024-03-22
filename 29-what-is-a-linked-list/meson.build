@@ -5,3 +5,4 @@ project(
 )
 
 executable('example', 'example.c')
+executable('move-array', 'move-array.c')
