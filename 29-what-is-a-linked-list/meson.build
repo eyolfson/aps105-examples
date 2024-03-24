@@ -5,5 +5,6 @@ project(
 )
 
 executable('example', 'example.c')
+executable('linked-list-start', 'linked-list-start.c')
 executable('move-array', 'move-array.c')
 executable('node', 'node.c')
