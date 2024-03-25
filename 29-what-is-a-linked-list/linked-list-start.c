@@ -23,11 +23,11 @@ void printList(linked_list_t *list) {
 }
 
 int main(void) {
-    node_t n3 = {4, NULL};
-    node_t n2 = {3, &n3};
-    node_t n1 = {2, &n2};
-    node_t n0 = {1, &n1};
-    linked_list_t list = {&n0};
+    node_t n4 = {4, NULL};
+    node_t n3 = {3, &n4};
+    node_t n2 = {2, &n3};
+    node_t n1 = {1, &n2};
+    linked_list_t list = {&n1};
     printList(&list);
     return EXIT_SUCCESS;
 }

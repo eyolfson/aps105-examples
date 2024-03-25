@@ -19,9 +19,11 @@ void printList(node_t *head) {
 }
 
 int main(void) {
-    node_t n2 = {3, NULL};
-    node_t n1 = {2, &n2};
-    node_t n0 = {1, &n1};
-    printList(&n0);
+    node_t n4 = {4, NULL};
+    node_t n3 = {3, &n4};
+    node_t n2 = {2, &n3};
+    node_t n1 = {1, &n2};
+    node_t *head = &n1;
+    printList(head);
     return EXIT_SUCCESS;
 }
