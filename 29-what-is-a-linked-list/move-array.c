@@ -12,6 +12,9 @@ void printArray(int array[], int arrayLength) {
 }
 
 void moveArray(int array[], int arrayLength) {
+    if (arrayLength <= 1) {
+        return;
+    }
     int first = array[0];
     for (int i = 0; i < arrayLength - 1; ++i) {
         array[i] = array[i + 1];
