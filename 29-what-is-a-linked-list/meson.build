@@ -4,6 +4,7 @@ project(
   default_options : ['c_std=gnu2x', 'warning_level=3']
 )
 
+executable('create-node', 'create-node.c')
 executable('example', 'example.c')
 executable('linked-list-start', 'linked-list-start.c')
 executable('move-array', 'move-array.c')
