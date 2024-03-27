@@ -25,9 +25,9 @@ void freeLinkedList(linked_list_t *linked_list) {
     node_t *current = linked_list->head;
     free(linked_list);
     while (current != NULL) {
-        node_t *node = current;
-        current = current->next;
-        free(node);
+        node_t *next = current->next;
+        free(current);
+        current = next;
     }
 }
 
