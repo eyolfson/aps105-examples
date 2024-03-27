@@ -5,6 +5,7 @@ project(
 )
 
 executable('example', 'example.c')
+executable('list', 'list.c')
 executable('list-four-nodes', 'list-four-nodes.c')
 executable('list-free', 'list-free.c')
 executable('list-insert-after', 'list-insert-after.c')
