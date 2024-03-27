@@ -7,6 +7,7 @@ project(
 executable('example', 'example.c')
 executable('list-four-nodes', 'list-four-nodes.c')
 executable('list-free', 'list-free.c')
+executable('list-insert-after', 'list-insert-after.c')
 executable('list-length', 'list-length.c')
 executable('list-remove', 'list-remove.c')
 executable('list-remove-alt', 'list-remove-alt.c')
