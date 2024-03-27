@@ -79,11 +79,11 @@ void removeNode(linked_list_t *linked_list, node_t *node) {
 
 int main(void) {
     linked_list_t *linked_list = createLinkedList();
-    node_t *n4 = insertFront(linked_list, 4);
-    insertFront(linked_list, 3);
+    insertFront(linked_list, 4);
+    node_t *n3 = insertFront(linked_list, 3);
     insertFront(linked_list, 2);
     insertFront(linked_list, 1);
-    removeNode(linked_list, n4);
+    removeNode(linked_list, n3);
     printLinkedList(linked_list);
     freeLinkedList(linked_list);
     return EXIT_SUCCESS;

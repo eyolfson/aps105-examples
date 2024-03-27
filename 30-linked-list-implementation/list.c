@@ -91,6 +91,10 @@ void insertAfter(node_t *after, node_t *node) {
     after->next = node;
 }
 
+void insertEnd(linked_list_t *linked_list, node_t *node) {
+    insertBefore(linked_list, NULL, node);
+}
+
 node_t *insertFront(linked_list_t *linked_list, int val) {
     node_t *node = createNode(val);
     node->next = linked_list->head;
@@ -100,21 +104,27 @@ node_t *insertFront(linked_list_t *linked_list, int val) {
 
 node_t *insertBack(linked_list_t *linked_list, int val) {
     node_t *node = createNode(val);
-    insertBefore(linked_list, NULL, node);
+    insertEnd(linked_list, node);
+    return node;
+}
+
+node_t *removeFront(linked_list_t *linked_list) {
+    node_t *node = linked_list->head;
+    if (node != NULL) {
+        linked_list->head = node->next;
+    }
     return node;
 }
 
 int main(void) {
     linked_list_t *linked_list = createLinkedList();
-    node_t *n4 = insertFront(linked_list, 4);
+    insertFront(linked_list, 4);
     insertFront(linked_list, 3);
-    node_t *n2 = insertFront(linked_list, 2);
+    insertFront(linked_list, 2);
     insertFront(linked_list, 1);
-    removeNode(linked_list, n4);
     printLinkedList(linked_list);
-    insertAfter(n2, createNode(7));
-    insertBefore(linked_list, n2, createNode(9));
-    insertBack(linked_list, 8);
+    node_t *n = removeFront(linked_list);
+    insertEnd(linked_list, n);
     printLinkedList(linked_list);
     freeLinkedList(linked_list);
     return EXIT_SUCCESS;
