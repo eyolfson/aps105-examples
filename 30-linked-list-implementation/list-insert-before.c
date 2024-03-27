@@ -92,6 +92,22 @@ int length(linked_list_t *linked_list) {
     return len;
 }
 
+void insertBefore(linked_list_t *linked_list, node_t *before, node_t *node) {
+    node_t *current = linked_list->head;
+    node_t *previous = NULL;
+    while (current != before) {
+        previous = current;
+        current = current->next;
+    }
+    if (previous == NULL) {
+        linked_list->head = node;
+    }
+    else {
+        previous->next = node;
+    }
+    node->next = before;
+}
+
 void insertAfter(node_t *after, node_t *node) {
     node->next = after->next;
     after->next = node;
@@ -106,6 +122,7 @@ int main(void) {
     removeNode(linked_list, n4);
     printLinkedList(linked_list);
     insertAfter(n2, createNode(7));
+    insertBefore(linked_list, n2, createNode(9));
     printLinkedList(linked_list);
     freeLinkedList(linked_list);
     return EXIT_SUCCESS;
