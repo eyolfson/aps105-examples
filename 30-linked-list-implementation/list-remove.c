@@ -69,11 +69,12 @@ void removeNode(linked_list_t *linked_list, node_t *node) {
         return;
     }
     if (previous == NULL) {
-        linked_list->head = current;
+        linked_list->head = current->next;
     }
     else {
         previous->next = current->next;
     }
+    current->next = NULL;
 }
 
 int main(void) {
