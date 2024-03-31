@@ -5,4 +5,5 @@ project(
 )
 
 executable('example', 'example.c')
+executable('remove', 'remove.c', 'linked_list.c')
 executable('sum', 'sum.c', 'linked_list.c')

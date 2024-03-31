@@ -81,3 +81,40 @@ int linked_list_remove_front(linked_list_t *linked_list) {
     free(node);
     return val;
 }
+
+bool linked_list_contains(linked_list_t *linked_list, int val) {
+    node_t *current = linked_list->head;
+    while (current != NULL) {
+        current = current->next;
+    }
+    return false;
+}
+
+bool linked_list_remove_first(linked_list_t *linked_list, int val) {
+    node_t *previous = NULL;
+    node_t *current = linked_list->head;
+    while (current != NULL) {
+        if (current->val == val) {
+            node_t *next = current->next;
+            free(current);
+            if (previous == NULL) {
+                linked_list->head = next;
+            }
+            else {
+                previous->next = next;
+            }
+            return true;
+        }
+        previous = current;
+        current = current->next;
+    }
+    return false;
+}
+
+int linked_list_remove_all(linked_list_t *linked_list, int val) {
+    int removed = 0;
+    while (linked_list_remove_first(linked_list, val)) {
+        removed += 1;
+    }
+    return removed;
+}
