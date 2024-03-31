@@ -85,6 +85,9 @@ int linked_list_remove_front(linked_list_t *linked_list) {
 bool linked_list_contains(linked_list_t *linked_list, int val) {
     node_t *current = linked_list->head;
     while (current != NULL) {
+        if (current->val == val) {
+            return true;
+        }
         current = current->next;
     }
     return false;
