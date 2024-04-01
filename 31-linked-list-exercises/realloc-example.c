@@ -21,19 +21,12 @@ int main(void) {
     arrayPrint(array, length);
 
     int new_length = 7;
-    int *new_array = malloc(new_length * sizeof(int));
+    int *new_array = realloc(array, new_length * sizeof(int));
     if (new_array == NULL) {
         free(array);
         exit(EXIT_FAILURE);
     }
-    for (int i = 0; i < length; ++i) {
-        new_array[i] = array[i];
-    }
-    free(array);
     array = new_array;
-    for (int i = length; i < new_length; ++i) {
-        array[i] = 0;
-    }
     length = new_length;
     arrayPrint(array, length);
     return EXIT_SUCCESS;
