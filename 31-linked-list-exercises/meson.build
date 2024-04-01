@@ -6,4 +6,5 @@ project(
 
 executable('example', 'example.c')
 executable('remove', 'remove.c', 'linked_list.c')
+executable('resize-array', 'resize-array.c')
 executable('sum', 'sum.c', 'linked_list.c')
