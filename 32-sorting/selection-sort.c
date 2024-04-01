@@ -3,6 +3,14 @@
 
 #define ARRAY_LENGTH(array) (sizeof((array))/sizeof((array)[0]))
 
+void printArray(int array[], int arrayLength) {
+    printf("array:");
+    for (int i = 0; i < arrayLength; ++i) {
+        printf(" %d", array[i]);
+    }
+    printf("\n");
+}
+
 void swap(int *x, int *y) {
     int temp = *x;
     *x = *y;
@@ -21,14 +29,6 @@ void selectionSort(int array[], int arrayLength) {
             swap(&array[i], &array[minIndex]);
         }
     }
-}
-
-void printArray(int array[], int arrayLength) {
-    printf("array: ");
-    for (int i = 0; i < arrayLength; ++i) {
-        printf(" %d", array[i]);
-    }
-    printf("\n");
 }
 
 int main(void) {
