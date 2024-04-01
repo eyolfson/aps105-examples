@@ -6,6 +6,7 @@ project(
 
 executable('calloc-example', 'calloc-example.c')
 executable('example', 'example.c')
+executable('final-question', 'final-question.c', 'linked_list.c')
 executable('realloc-example', 'realloc-example.c')
 executable('remove', 'remove.c', 'linked_list.c')
 executable('resize-array', 'resize-array.c')
