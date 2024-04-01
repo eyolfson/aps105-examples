@@ -6,3 +6,4 @@ project(
 
 executable('bubble-sort', 'bubble-sort.c')
 executable('example', 'example.c')
+executable('selection-sort', 'selection-sort.c')
