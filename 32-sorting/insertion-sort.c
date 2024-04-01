@@ -5,17 +5,14 @@
 
 void insertionSort(int array[], int arrayLength) {
     for (int i = 1; i < arrayLength; ++i) {
-        int temp = array[i];
+        int element = array[i];
         int j = i;
-        while (j > 0) {
-            if (array[j - 1] < temp) {
-                break;
-            }
+        while (j > 0 && array[j - 1] > element) {
             array[j] = array[j - 1];
             --j;
         }
         if (j != i) {
-          array[j] = temp;
+          array[j] = element;
         }
     }
 }
