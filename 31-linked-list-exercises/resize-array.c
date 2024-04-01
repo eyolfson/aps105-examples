@@ -9,6 +9,13 @@ void arrayPrint(int *array, int arrayLength) {
     printf("\n");
 }
 
+int min(int a, int b) {
+    if (a > b) {
+        return b;
+    }
+    return a;
+}
+
 int main(void) {
     int length = 4;
     int *array = malloc(length * sizeof(int));
@@ -26,7 +33,7 @@ int main(void) {
         free(array);
         exit(EXIT_FAILURE);
     }
-    for (int i = 0; i < length; ++i) {
+    for (int i = 0; i < min(length, new_length); ++i) {
         new_array[i] = array[i];
     }
     free(array);
