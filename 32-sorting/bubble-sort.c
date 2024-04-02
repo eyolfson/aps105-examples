@@ -12,15 +12,19 @@ void printArray(int array[], int arrayLength) {
     printf("\n");
 }
 
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 void bubbleSort(int array[], int arrayLength) {
     bool swapped;
     do {
         swapped = false;
         for (int i = 0; i < arrayLength - 1; ++i) {
             if (array[i] > array[i + 1]) {
-                int temp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp;
+                swap(&array[i], &array[i + 1]);
                 swapped = true;
             }
         }
