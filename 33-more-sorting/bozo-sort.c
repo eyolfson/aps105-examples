@@ -27,7 +27,7 @@ bool inOrder(int array[], int arrayLength) {
     return true;
 }
 
-void bogoSort(int array[], int arrayLength) {
+void bozoSort(int array[], int arrayLength) {
     while (!inOrder(array, arrayLength)) {
         int i = rand() % arrayLength;
         int j = rand() % (arrayLength - 1);
@@ -42,7 +42,7 @@ int main(void) {
     int array[] = {10, 14, 8, 13, 20, 3, 6, 9, 4};
     int arrayLength = ARRAY_LENGTH(array);
     printArray(array, arrayLength);
-    bogoSort(array, arrayLength);
+    bozoSort(array, arrayLength);
     printArray(array, arrayLength);
     return EXIT_SUCCESS;
 }
