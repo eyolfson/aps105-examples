@@ -12,7 +12,11 @@ void printArray(int array[], int arrayLength) {
 }
 
 int compare(const void *a, const void *b) {
-    return *((int *)a) - *((int *)b);
+    int x = *((const int *) a);
+    int y = *((const int *) b);
+    if (x < y)      { return -1; }
+    else if (x > y) { return 1; }
+    else            { return 0; }
 }
 
 int main(void) {

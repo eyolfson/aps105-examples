@@ -19,15 +19,15 @@ void swap(int *x, int *y) {
 
 int partition(int array[], int low, int high) {
     int pivot = array[high];
-    int i = low - 1; /* Temporary pivot index */
-    for(int j = low; j <= high; j++) {
+    int i = low;
+    for(int j = low; j < high; j++) {
         if(array[j] < pivot) {
-            /* Move the pivot one element forward */
+            if (i != j) {
+                swap(&array[i], &array[j]);
+            }
             ++i;
-            swap(&array[i], &array[j]);
         }
     }
-    ++i;
     swap(&array[i], &array[high]);
     return i;
 }
@@ -46,7 +46,7 @@ void quickSort(int array[], int arrayLength) {
 }
 
 int main(void) {
-    int array[] = {10, 14, 8, 13, 20, 3, 6, 9, 4};
+    int array[] = {10, 14, 8, 13, 20, 3, 6, 9};
     int arrayLength = ARRAY_LENGTH(array);
     quickSort(array, arrayLength);
     printArray(array, arrayLength);
