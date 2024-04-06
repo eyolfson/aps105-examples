@@ -39,11 +39,13 @@ int intCompare(const void *a, const void *b) {
 }
 
 int main(void) {
-    //int array[] = {10, 14, 8, 13, 20, 3, 6, 9, 4, 8, 3, 1, 19, 15};
-    int array[] = {10, 14, 8, 13, 20};
+    int array[] = {10, 14, 8, 13, 20, 3, 6, 9, 4, 8, 3, 1, 19, 15};
     int arrayLength = ARRAY_LENGTH(array);
     qsort(array, arrayLength, sizeof(int), intCompare);
     printArray(array, arrayLength);
-    binarySearch(array, arrayLength, 9);
+    int index = binarySearch(array, arrayLength, 6);
+    if (index != -1) {
+        printf("Found at index: %d\n", index);
+    }
     return EXIT_SUCCESS;
 }
