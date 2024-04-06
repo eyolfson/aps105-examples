@@ -11,12 +11,12 @@ void printArray(int array[], int arrayLength) {
     printf("\n");
 }
 
-int binarySearch(int array[], int arrayLength, int val) {
+int binarySearchFirst(int array[], int arrayLength, int val) {
     int low = 0;
     int high = arrayLength - 1;
     while (low <= high) {
         int mid = (high + low) / 2;
-        if (val == array[mid]) {
+        if ((mid == 0 || val > array[mid - 1]) && val == array[mid]) {
             return mid;
         }
         else if (val > array[mid]) {
@@ -42,7 +42,7 @@ int main(void) {
     int arrayLength = ARRAY_LENGTH(array);
     qsort(array, arrayLength, sizeof(int), intCompare);
     printArray(array, arrayLength);
-    int index = binarySearch(array, arrayLength, 6);
+    int index = binarySearchFirst(array, arrayLength, 8);
     if (index != -1) {
         printf("Found at index: %d\n", index);
     }
