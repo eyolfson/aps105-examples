@@ -7,3 +7,4 @@ project(
 executable('binary-search', 'binary-search.c')
 executable('example', 'example.c')
 executable('linear-search', 'linear-search.c')
+executable('recursive-binary-search', 'recursive-binary-search.c')
