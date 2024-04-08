@@ -5,6 +5,7 @@ project(
 )
 
 executable('binary-search', 'binary-search.c')
+executable('binary-search-count', 'binary-search-count.c')
 executable('binary-search-first', 'binary-search-first.c')
 executable('binary-search-last', 'binary-search-last.c')
 executable('example', 'example.c')
