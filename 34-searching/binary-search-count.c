@@ -37,7 +37,7 @@ int binarySearchLast(int array[], int arrayLength, int val) {
         if ((mid == arrayLength - 1 || val < array[mid + 1]) && val == array[mid]) {
             return mid;
         }
-        else if (val > array[mid]) {
+        else if (val >= array[mid]) {
             low = mid + 1;
         }
         else {
