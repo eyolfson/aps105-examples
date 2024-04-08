@@ -19,11 +19,11 @@ int recursiveBinarySearchHelper(int array[], int low, int high, int val) {
     if (val == array[mid]) {
         return mid;
     }
-    else if (array[mid] > val) {
-        return recursiveBinarySearchHelper(array, low, mid - 1, val);
+    else if (val > array[mid]) {
+        return recursiveBinarySearchHelper(array, mid + 1, high, val);
     }
     else {
-        return recursiveBinarySearchHelper(array, mid + 1, high, val);
+        return recursiveBinarySearchHelper(array, low, mid - 1, val);
     }
 }
 
